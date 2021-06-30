@@ -1,0 +1,304 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: white;
+    overflow: hidden;
+    font-size:16px;
+    color: black;
+}
+
+.container{
+    height: 100vh;
+    /* border: 2px solid red; */
+}
+
+.title-bar{
+    height: 5vh;
+    /* border: 2px solid green; */
+    background-color: #107c41;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.menu-bar{
+    height: 5vh;
+    /* border: 2px solid yellow; */
+    background-color: #107c41;
+    display: flex;
+    color: white;
+
+}
+
+.menu-item{
+    padding:0px 10px 0px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item.selected{
+    background-color: rgb(241, 241, 239);
+    color: #107c41;
+}
+
+.menu-item:hover{
+    background-color: rgb(25, 138, 25);
+    cursor: pointer;
+}
+
+.menu-item.selected:hover{
+    background-color: rgb(241, 241, 239);
+}
+
+.font-family-selector{
+    height: 35px;
+    /* display: flex;
+    align-items: center; */
+    font-size: 17px;
+    width: 120px;
+    font-family: 'Noto Sans';
+}
+
+.selector{
+    height: 30px;
+    font-size: 14px;    
+}
+
+.selector option{
+    height: 30px;
+    font-size: 14px;
+}
+
+.menu-icon-bar{
+    height: 6vh;
+    /* border: 2px solid blue; */
+    color: rgb(17, 16, 16);
+    display: flex;
+    align-items: center;
+    background-color: rgb(241, 241, 239);
+}
+
+.menu-icon{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    height: 80%;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.menu-icon:hover{
+    cursor: pointer;
+    background-color: rgb(172, 167, 167);
+}
+
+.formula-bar{
+    height: 6vh;
+    /* border: 2px solid orange; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    background-color: rgb(241, 241, 239);
+}
+
+.data-container{
+    height: 74vh;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.select-all{
+    width: 30px;
+    height: 30px;
+    border: 2px solid lightgray;
+}
+
+.column-name-container{
+    width: calc(100vw - 30px);
+    height: 30px;
+    border: 2px solid lightgray;
+    display: flex;
+    overflow: hidden;
+}
+
+.row-name-container{
+    width: 30px;
+    height: calc(74vh - 30px);
+    border: 2px solid lightgray;
+    overflow: hidden;
+}
+
+.input-cell-container{
+    width: calc(100vw - 30px);
+    height: calc(74vh - 30px);
+    border: 2px solid lightgray;
+    overflow: scroll;
+}
+
+
+.sheet-bar{
+    height: 4vh;
+    /* border: 2px solid purple; */
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.scroller{
+    width: 70px;
+}
+
+.icon-left-scroll, .icon-right-scroll{
+    font-size: 30px;
+}
+
+.icon-left-scroll:hover, .icon-right-scroll:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.icon-add{
+    color: #107c41;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 40px;
+}
+
+.icon-add:hover{
+    cursor: pointer;
+    transform: scale(1.25);
+}
+
+.sheet-tab-container{
+    border: 1px solid lightgray;
+    width: calc(100vw - 110px);
+}
+
+.sheet-tab{
+    border-bottom:4px solid #107c41;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    font-weight: 600;
+    border-right:1px solid lightgray ;
+}
+
+.sheet-tab:hover{
+    cursor: default;
+}
+
+.column-name{
+    min-width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-right: 1px solid lightgray;
+}
+
+.row-name{
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-bottom: 1px solid lightgray;
+}
+
+.cell-row{
+    display: flex;
+
+}
+
+.input-cell{
+    min-width: 70px;
+    min-height: 30px;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    outline-color: #107c41;
+    font-size: 16;
+    font-family: 'Noto Sans';
+}
+
+.input-cell.selected{
+    border: 2px solid #107c41;
+}
+
+.formula-editor{
+    height: 70%;
+    border: 1px solid lightgray;
+    background-color: white;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    display: flex;
+    align-items: center;
+    outline-color:#107c41 ;
+}
+
+.selected-cell{
+    width: 120px;
+}
+
+.function-sign{
+    width: 40px;
+    height: 70%;
+    /* border: 1px solid lightgray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formula-input{
+    width: calc(100vw - 160px);
+    /* border: 1px solid lightgray; */
+    /* background-color: white; */
+    /* outline-color:#107c41 ; */
+}
+
+.menu-icon.selected{
+    background-color: lightgrey;
+}
+
+.input-cell.top-cell-selected{
+    border-top:none;
+}
+
+.input-cell.bottom-cell-selected{
+    border-bottom: 2px solid lightgray;
+}
+
+.input-cell.left-cell-selected{
+    border-left: none;
+}
+
+.input-cell.right-cell-selected{
+    border-right: 2px solid lightgray;
+}
+
+.icon-color-fill, .icon-color-text{
+    position: relative;
+}
+
+.color-picker{
+    position: absolute;
+    width: 27px;
+    height: 12px;
+    border: none;
+    padding: none;
+    top: 24px;
+    left: 8px;
+    cursor: pointer;
+}
